@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "polymarket-copytrade-replay-firewall"
+version = "0.1.0"
+description = "Minimal starter for Polymarket replay + risk firewall toolkit"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Open Source" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+pm-replay = "polymarket_copytrade_replay_firewall.main:cli"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"
